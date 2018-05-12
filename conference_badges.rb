@@ -4,7 +4,7 @@ def badge_maker(name)
 end
 
 def batch_badge_creator(names_array)
-  badges =  []
+  badges = []
   names_array.each do |name|
     badges << badge_maker(name)
   end
@@ -22,7 +22,7 @@ def printer(names_array)
   badges.each do |badge|
     puts badge
   end
-  rooms = assign_rooms(initial_names_array)
+  rooms = assign_rooms(names_array)
   rooms.each do |room|
     puts room
   end
