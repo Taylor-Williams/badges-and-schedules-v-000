@@ -4,9 +4,11 @@ def badge_maker(name)
 end
 
 def batch_badge_creator(names_array)
-  names_array.each_with_index do |name, index|
-    names_array[index] = badge_maker(name)
+  badges == []
+  names_array.each do |name|
+    badges << badge_maker(name)
   end
+  return badges
 end
 
 def assign_rooms(names_array)
@@ -16,7 +18,6 @@ def assign_rooms(names_array)
 end
 
 def printer(names_array)
-  initial_names_array = names_array
   badges = batch_badge_creator(names_array)
   badges.each do |badge|
     puts badge
