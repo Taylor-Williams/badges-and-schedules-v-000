@@ -17,7 +17,7 @@ end
 
 def printer(names_array)
   initial_names_array = names_array
-  badges = batch_badge_creator(initial_names_array)
+  badges = batch_badge_creator(names_array)
   badges.each do |badge|
     puts badge
   end
